@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 import { shiftReducer } from "../reducers";
-import { getShiftsData } from "../utils";
+import { getShiftsData } from "../helpers";
 
 const shiftsContext = createContext(null);
 

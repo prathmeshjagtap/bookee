@@ -7,14 +7,20 @@ const shiftReducer = (state, action) => {
 				...state,
 				allShiftsData: action.payload,
 			};
-		case ShiftReducerConstants.AVAILABLE_SHIFTS:
-			return { ...state, availableShifts: action.payload };
-		case ShiftReducerConstants.MYSHIFTS:
-			return { ...state, myShifts: action.payload };
 		case ShiftReducerConstants.LOADING:
 			return { ...state, loading: !state.loading };
 		case ShiftReducerConstants.ERROR:
 			return { ...state, error: action.payload };
+		case ShiftReducerConstants.CANCEL_SHIFT:
+			const cancelShifts = state.allShiftsData.filter((item) =>
+				item.id === action.payload ? (item.booked = false) : item
+			);
+			return { ...state, allShiftsData: cancelShifts };
+		case ShiftReducerConstants.BOOK_SHIFT:
+			const bookedShifts = state.allShiftsData.filter((item) =>
+				item.id === action.payload ? (item.booked = true) : item
+			);
+			return { ...state, allShiftsData: bookedShifts };
 
 		default:
 			return state;

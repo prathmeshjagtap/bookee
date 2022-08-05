@@ -12,3 +12,8 @@
 	align-items: center;
 	width: 100%;
 }
+.btn {
+	padding: 0.5rem 2rem;
+	border-radius: 2rem;
+	font-size: 1.1rem;
+}

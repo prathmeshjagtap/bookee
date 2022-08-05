@@ -34,10 +34,12 @@
 	font-size: 1.1rem;
 }
 .btn__cancel {
-	padding: 0.5rem 2rem;
-	border-radius: 2rem;
-	font-size: 1.1rem;
 	color: #e2006a;
 	border: 1px solid #e2006a;
+	background-color: #f7f8fb;
+}
+.btn__book {
+	color: #16a64d;
+	border: 1px solid #16a64d;
 	background-color: #f7f8fb;
 }

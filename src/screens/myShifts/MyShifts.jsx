@@ -7,7 +7,7 @@ import "./myShifts.css";
 function MyShifts() {
 	const { shiftState } = useShiftsContext();
 
-	const MyShifts = shiftState?.allShiftsData.filter((item) => !item.booked);
+	const MyShifts = shiftState?.allShiftsData.filter((item) => item.booked);
 
 	let groupedShifts = groupAllShifts(MyShifts);
 

@@ -1,9 +1,12 @@
 import React from "react";
+import { useShiftsContext } from "../../context";
+import { bookShift, cancelShift } from "../../helpers";
 import { getRequiredDate, convertTime } from "../../utils";
 import "./myShiftsTable.css";
 
 function MyShiftsTable({ shifts, date }) {
 	const presentdate = getRequiredDate(date);
+	const { shiftDispatch } = useShiftsContext();
 
 	return (
 		<div className="shiftsGroup__container">
@@ -22,7 +25,21 @@ function MyShiftsTable({ shifts, date }) {
 							</div>
 							<p className="shifts__area">{shift.area}</p>
 						</div>
-						<button className="btn__cancel">Cancel</button>
+						{shift?.booked ? (
+							<button
+								className=" btn btn__cancel"
+								onClick={() => cancelShift(shift.id, shiftDispatch)}
+							>
+								Cancel
+							</button>
+						) : (
+							<button
+								className=" btn btn__book"
+								onClick={() => bookShift(shift.id, shiftDispatch)}
+							>
+								Book
+							</button>
+						)}
 					</div>
 				))}
 		</div>
