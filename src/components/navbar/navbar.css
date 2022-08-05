@@ -1,0 +1,16 @@
+.navbar {
+	display: flex;
+	font-size: 1.5rem;
+	text-decoration: none;
+	gap: 1rem;
+	margin: 1rem;
+	margin-top: 5rem;
+}
+.link {
+	text-decoration: none;
+	color: #cbd2e1;
+}
+.isActive {
+	text-decoration: none;
+	color: #004fb4;
+}

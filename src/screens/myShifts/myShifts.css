@@ -1,0 +1,12 @@
+.myshifts__container {
+	border: 1px solid #cbd2e1;
+	width: 700px;
+	border-radius: 8px;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.cities__container {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 2rem;
+	font-size: 1.2rem;
+}

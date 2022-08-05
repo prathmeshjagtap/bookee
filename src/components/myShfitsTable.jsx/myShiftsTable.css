@@ -1,0 +1,43 @@
+.shiftsGroup__container {
+	display: flex;
+	flex-direction: column;
+}
+.shifts__header {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	background-color: #f1f4f8;
+	padding: 1rem 1.5rem;
+	border-bottom: 1px solid #cbd2e1;
+}
+
+.shifts__day {
+	font-size: 1.4rem;
+	color: #4f6c92;
+}
+.shifts__Duration {
+	color: #cbd2e1;
+}
+.shifts__container {
+	padding: 1rem 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #cbd2e1;
+}
+.shifts__time {
+	color: #4f6c92;
+	font-size: 1.2rem;
+}
+.shifts__area {
+	color: #cbd2e1;
+	font-size: 1.1rem;
+}
+.btn__cancel {
+	padding: 0.5rem 2rem;
+	border-radius: 2rem;
+	font-size: 1.1rem;
+	color: #e2006a;
+	border: 1px solid #e2006a;
+	background-color: #f7f8fb;
+}
