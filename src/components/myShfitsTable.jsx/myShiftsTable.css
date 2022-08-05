@@ -38,8 +38,27 @@
 	border: 1px solid #e2006a;
 	background-color: #f7f8fb;
 }
+.btn__cancel_disabled {
+	color: #eed2df;
+	border: 1px solid #eed2df;
+}
 .btn__book {
 	color: #16a64d;
 	border: 1px solid #16a64d;
 	background-color: #f7f8fb;
+}
+.btn__book_disabled {
+	color: #caefd8;
+	border: 1px solid #caefd8;
+}
+.cancelButton__container {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.booked__shift {
+	color: #456692;
+	font-weight: bold;
+	font-size: 1rem;
 }
