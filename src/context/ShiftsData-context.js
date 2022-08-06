@@ -13,6 +13,7 @@ function ShiftsProvider({ children }) {
 		availableShifts: [],
 		error: "",
 		loading: false,
+		dataFetched: false,
 	});
 
 	useEffect(() => {

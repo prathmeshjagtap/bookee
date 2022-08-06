@@ -15,11 +15,18 @@ function MyShifts() {
 		<div>
 			<Navbar />
 			<div className="myshifts__container">
-				{Object.keys(groupedShifts).map((key) => {
-					return (
-						<MyShiftsTable shifts={groupedShifts[key]} date={key} key={key} />
-					);
-				})}
+				{MyShifts && MyShifts.length !== 0 ? (
+					Object.keys(groupedShifts).map((key) => {
+						return (
+							<MyShiftsTable shifts={groupedShifts[key]} date={key} key={key} />
+						);
+					})
+				) : (
+					<div className="empty__shifts">
+						You have not booked any shifts please book shifts from available
+						shifts
+					</div>
+				)}
 			</div>
 		</div>
 	);

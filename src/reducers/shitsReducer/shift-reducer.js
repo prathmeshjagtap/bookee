@@ -6,6 +6,7 @@ const shiftReducer = (state, action) => {
 			return {
 				...state,
 				allShiftsData: action.payload,
+				dataFetched: true,
 			};
 		case ShiftReducerConstants.LOADING:
 			return { ...state, loading: !state.loading };

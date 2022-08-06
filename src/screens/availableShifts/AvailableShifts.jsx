@@ -6,7 +6,7 @@ import "../myShifts/myShifts.css";
 
 function AvailableShifts() {
 	const {
-		shiftState: { allShiftsData },
+		shiftState: { allShiftsData, dataFetched },
 	} = useShiftsContext();
 
 	const groupedByCities = groupByCities(allShiftsData);
@@ -15,10 +15,11 @@ function AvailableShifts() {
 	const [selectedCity, setselectedCity] = useState("");
 
 	useEffect(() => {
-		const groupedByCities = groupByCities(allShiftsData);
-		const cities = Object.keys(groupedByCities);
-		setselectedCity(cities[0]);
-	}, [allShiftsData]);
+		if (dataFetched) {
+			setselectedCity(cities[0]);
+		}
+	}, [dataFetched]);
+
 	return (
 		<div>
 			<Navbar />

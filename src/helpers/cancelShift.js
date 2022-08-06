@@ -1,7 +1,7 @@
 // import axios from "axios";
 import { ShiftReducerConstants } from "../reducers";
 
-const cancelShift = async (id, dispatch) => {
+const cancelShift = async (id, dispatch, setloading) => {
 	// Post Api Call is not working so I made changes on Frontend
 
 	// try {
@@ -15,11 +15,15 @@ const cancelShift = async (id, dispatch) => {
 	// 		payload: error,
 	// 	});
 	// }
+	setloading(true);
 	try {
-		dispatch({
-			type: ShiftReducerConstants.CANCEL_SHIFT,
-			payload: id,
-		});
+		setTimeout(() => {
+			dispatch({
+				type: ShiftReducerConstants.CANCEL_SHIFT,
+				payload: id,
+			});
+			setloading(false);
+		}, 500);
 	} catch (error) {
 		dispatch({
 			type: ShiftReducerConstants.ERROR,
